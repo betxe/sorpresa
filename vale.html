@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>¡Tu regalo!</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      flex-direction: column;
+      text-align: center;
+    }
+    img {
+      max-width: 90%;
+      height: auto;
+      margin-top: 2rem;
+      border: 4px solid white;
+      border-radius: 12px;
+    }
+    .fecha {
+      font-size: 1.5rem;
+      margin-top: 0.8rem;
+      color: white;
+    }
+
+    h1{
+        color:#6e9d8f;
+    }
+
+    b{
+        font-family: Calibri, sans-serif;
+        color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1><b>🎉 ¡Felicidades Ama! 🎉</b></h1>
+  <b><p class="fecha" id="mostrarFecha"></p></b>
+  <p><b>Válido para dos personas</b></p>
+  <img src="vale-la-perla.png" alt="Vale Spa La Perla">
+  
+  <script>
+    const fechaGuardada = localStorage.getItem("fechaSeleccionada");
+    if (fechaGuardada) {
+      const opciones = { year: 'numeric', month: 'long', day: 'numeric' };
+      const fechaFormateada = new Date(fechaGuardada).toLocaleDateString('es-ES', opciones);
+      document.getElementById("mostrarFecha").textContent = `Has elegido disfrutarlo el: ${fechaFormateada}`;
+    }
+  </script>
+</body>
+</html>
