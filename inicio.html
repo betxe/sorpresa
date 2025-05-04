@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Feliz Dia Ama</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #847092, #807797);
+      font-family: 'Calibri', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 100vh;
+      position: relative;
+    }
+
+    .mensaje {
+      font-size: 1.6rem;
+      margin: 1rem;
+      color: white;
+    }
+
+    .foto {
+      max-width: 80%;
+      max-height: 480px;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    }
+
+    .btn-siguiente {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      background-color: #d81b60;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.2rem;
+      font-size: 1rem;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn-siguiente:hover {
+      background-color: #ad1457;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="mensaje">
+    💖 Ama, de parte de toda tu familia, te deseamos un día lleno de amor, alegría y sorpresas. ¡Feliz Día de la Madre! 💐
+  </div>
+
+  <img src="tu-foto-familiar.jpg" alt="Foto familiar" class="foto">
+
+  <button class="btn-siguiente" onclick="window.location.href='index.html'">Siguiente ➡️</button>
+
+</body>
+</html>
